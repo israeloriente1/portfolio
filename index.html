@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/png">
+
+    <!-- Importing bootstrap -->
+    <link rel="stylesheet" href="./css/index.css">
+
+    <title>Portfólio | Israel Oriente - Desenvolvedor Web</title>
+
+    <style>
+        .logo {
+            max-height: 30px;
+        }
+
+        .illustration-height {
+            height: 490px;
+        }
+
+        /* header */
+
+        header .contact-nav-item {
+            border-radius: 0px 0px 12px 12px;
+        }
+
+        /* modal button */
+        header button.mobile-button img {
+            height: 22px;
+        }
+
+        header button.mobile-close-button {
+            border: none !important;
+        }
+
+        header button.mobile-close-button img {
+            filter: invert(1);
+            height: 20px;
+        }
+
+        header nav#modal-nav li:active {
+            transform: scale(.9);
+        }
+
+        header nav#modal-nav {
+            height: 100%;
+        }
+
+        header nav#modal-nav ul.modal-social-media {
+            position: absolute;
+            bottom: 20px;
+            right: 17px;
+        }
+
+        /* title */
+
+        header h1 {
+            font-weight: 700;
+            font-size: 83.0652px;
+            line-height: 80px;
+            letter-spacing: 0.115em;
+            color: #384359;
+        }
+
+        header span.dashed-letter {
+            text-shadow:
+                -2px 0px 0px #384359,
+                2px 0px 0px #384359,
+                0px -2px 0px #384359,
+                0px 2px 0px #384359;
+            color: #A0B9D9;
+        }
+
+        header section.header-title {
+            position: relative;
+            width: fit-content;
+        }
+
+        header section.header-title::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -23px;
+            right: -35px;
+            width: 130px;
+            height: 10px;
+            background-color: #384359;
+        }
+
+        @media (max-width: 1050px) {
+            header h1 {
+                font-size: 60px;
+                line-height: 64px;
+            }
+
+            .illustration-height {
+                height: 410px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            header section#header-main-content {
+                flex-direction: column-reverse;
+            }
+
+            header section#header-main-content object {
+                margin-bottom: 80px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header img.logo {
+                max-height: 25px;
+                margin: auto;
+                padding-left: 50px;
+            }
+
+            header nav#header-nav ul li {
+                display: none;
+            }
+
+            header nav button.mobile-button {
+                display: flex !important;
+            }
+        }
+
+        @media (max-width: 500px) {
+            header section.header-title h1 {
+                margin-left: -32px;
+                font-size: 50px;
+                line-height: 52px;
+            }
+
+            header section#header-main-content object {
+                height: 360px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-primary">
+        <!-- nav container -->
+        <section class="header-nav-container bg-primary container-xxl px-md-5 d-flex justify-content-between align-items-center">
+            <img class="logo" src="./assets/Logo.svg" alt="logo">
+
+            <!-- nav -->
+            <nav id="header-nav" class="header-nav">
+                <ul class="navbar-nav d-flex flex-row fw-semibold">
+                    <li class="nav-item">
+                      <a class="nav-link px-3 py-4" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-3 py-4" href="#">Projetos</a>
+                    </li>
+                    <li class="contact-nav-item nav-item text-white bg-info">
+                      <a class="nav-link px-3 py-4" href="#">Contato</a>
+                    </li>
+
+                    <!-- mobile menu (modal button) -->
+                    <button type="button" class="mobile-button d-none btn btn-primary py-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src="./assets/menu-mobile.svg" alt="menu mobile">
+                    </button>
+                </ul>
+            </nav>
+
+            <!-- Modal -->
+            <div class="mobile-modal-menu bg-dark modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content bg-dark container-xxl text-white">
+                    <!-- header -->
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title">Menu</h5>
+                        <button type="button" class="mobile-close-button btn text-white pe-0 py-2" data-bs-dismiss="modal">
+                            <img src="./assets/close-icon.svg" alt="close icon">
+                        </button>
+                    </div>
+
+                    <!-- body -->
+                    <div class="modal-body">
+
+                        <nav id="modal-nav" class="modal-nav d-flex flex-column">
+                            <ul class="navbar-nav text-center fw-semibold">
+                                <li class="nav-item text-white" data-bs-dismiss="modal">
+                                  <a class="nav-link px-3 py-4" href="#">Home</a>
+                                </li>
+                                <li class="nav-item text-white" data-bs-dismiss="modal">
+                                  <a class="nav-link px-3 py-4" href="#">Projetos</a>
+                                </li>
+                                <li class="nav-item text-white" data-bs-dismiss="modal">
+                                  <a class="nav-link px-3 py-4" href="#">Contato</a>
+                                </li>
+                            </ul>
+
+                            <ul class="modal-social-media navbar-nav d-flex flex-row-reverse">
+                                <li class="nav-item text-white">
+                                    <a href="https://wa.me/5583987119375" target="_blank" rel="external"><img class="whatsapp-icon" src="./assets/logo whatsapp.svg" alt="whatsapp logo" style="height: 25px;"></a>
+                                </li>
+                                <li class="nav-item text-white me-3">
+                                    <a href="https://www.linkedin.com/in/israeloriente/" target="_blank" rel="external"><img src="./assets/logo linkedin.svg" alt="linkedin logo"></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- main content -->
+        <section id="header-main-content" class="container-xxl d-flex justify-content-between align-items-center px-md-5 py-5">
+            <!-- title -->
+            <section class="header-title d-flex flex-column flex-column-reverse">
+                <h1>Israel <br> <span class="dashed-letter">Oriente</span></h1>
+                <h5 class="text-center text-secondary">PORTFÓLIO</h5>
+            </section>
+
+            <!-- illustration -->
+            <object class="illustration-height" data="./assets/code-illustration.svg" type="image/svg+xml"></object>
+        </section>
+
+        <img class="d-block mx-auto py-3" src="./assets/arrow-down.png" alt="arrow down" style="width: 35px;">
+    </header>
+    
+    <!-- bootstrap scripts -->
+    <script src="./css/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
