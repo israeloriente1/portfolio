@@ -5,3 +5,31 @@
 .illustration-height {
     height: 490px;
 }
+
+.illustration-width {
+    max-width: 500px;
+}
+
+// scroll reveal
+
+.scroll-grow, .scroll-fade, .scroll-top, .scroll-bottom, .scroll-left, .scroll.right {
+    visibility: hidden;
+}
+
+/* wave */
+.wave-effect-top, .wave-effect-bottom {
+    width: 101%;
+}
+
+.wave-effect-top {
+    margin-top: -2px !important;
+}
+
+.wave-effect-bottom {
+    margin-bottom: -2px !important;
+}
+
+/* main */
+main {
+    overflow: hidden;
+}

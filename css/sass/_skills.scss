@@ -1,0 +1,68 @@
+/* skills */
+section#skills {
+    background: linear-gradient(189.84deg, #384359 31.77%, #1B212D 69.27%);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.illustration-describe-left, .illustration-describe-right {
+    max-width: 450px;
+}
+
+div.illustration-describe-left::after, div.illustration-describe-right::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    width: 100px;
+    height: 4px;
+    background-color: white;
+}
+
+div.illustration-describe-left::after {
+    right: 0;
+}
+
+div.illustration-describe-right::after {
+    left: 0;
+}
+
+@media (max-width: 1070px) {
+    .illustration-width {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 870px) {
+    .illustration-width {
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 700px) {
+    section.illustration-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.illustration-container-reverse {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .illustration-width {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    div.illustration-describe-left, div.illustration-describe-right {
+        margin-top: 55px;
+        text-align: left !important;
+    }
+
+    /* reset the rectangle direction */
+    div.illustration-describe-right::after, div.illustration-describe-left::after {
+        right: 0 !important;
+        left: auto;
+    }
+}

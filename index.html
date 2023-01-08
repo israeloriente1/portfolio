@@ -9,29 +9,33 @@
     <!-- Importing bootstrap -->
     <link rel="stylesheet" href="./css/index.css">
 
+    <!-- Import ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <title>Portfólio | Israel Oriente - Desenvolvedor Web</title>
 
-    <style>      
+    <style> 
+        
 
     </style>
 </head>
 <body>
 
-    <header class="bg-primary">
+    <header id="header-container" class="bg-primary">
         <!-- nav container -->
         <section class="header-nav-container bg-primary container-xxl px-md-5 d-flex justify-content-between align-items-center">
-            <img class="logo" src="./assets/Logo.svg" alt="logo">
+            <img class="logo scroll-grow" src="./assets/Logo.svg" alt="logo">
 
             <!-- nav -->
             <nav id="header-nav" class="header-nav">
                 <ul class="navbar-nav d-flex flex-row fw-semibold">
-                    <li class="nav-item">
-                      <a class="nav-link px-3 py-4" href="#">Home</a>
+                    <li class="nav-item scroll-bottom">
+                      <a class="nav-link px-3 py-4" href="#header-container">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item scroll-bottom">
                       <a class="nav-link px-3 py-4" href="#">Projetos</a>
                     </li>
-                    <li class="contact-nav-item nav-item text-white bg-info">
+                    <li class="contact-nav-item nav-item text-white bg-info scroll-bottom">
                       <a class="nav-link px-3 py-4" href="#">Contato</a>
                     </li>
 
@@ -60,7 +64,7 @@
                         <nav id="modal-nav" class="modal-nav d-flex flex-column">
                             <ul class="navbar-nav text-center fw-semibold">
                                 <li class="nav-item text-white" data-bs-dismiss="modal">
-                                  <a class="nav-link px-3 py-4" href="#">Home</a>
+                                  <a class="nav-link px-3 py-4" href="#header-container">Home</a>
                                 </li>
                                 <li class="nav-item text-white" data-bs-dismiss="modal">
                                   <a class="nav-link px-3 py-4" href="#">Projetos</a>
@@ -88,7 +92,7 @@
         <!-- main content -->
         <section id="header-main-content" class="container-xxl d-flex justify-content-between align-items-center px-md-5 py-5">
             <!-- title -->
-            <section class="header-title d-flex flex-column flex-column-reverse">
+            <section class="header-title d-flex flex-column flex-column-reverse scroll-right">
                 <h1>Israel <br> <span class="dashed-letter">Oriente</span></h1>
                 <h5 class="text-center text-secondary">PORTFÓLIO</h5>
             </section>
@@ -97,17 +101,77 @@
             <object class="illustration-height" data="./assets/code-illustration.svg" type="image/svg+xml"></object>
         </section>
 
-        <img class="d-block mx-auto py-3" src="./assets/arrow-down.png" alt="arrow down" style="width: 35px;">
+        <img class="d-block mx-auto py-3 scroll-bottom" src="./assets/arrow-down.png" alt="arrow down" style="width: 35px;">
     </header>
 
     <main>
-        <section id="about-me" class="bg-primary container-xxl px-md-5 py-3">
-            <h3 class="fw-bolder text-dark">Quem sou</h3>
-            <p class="p-4">Desenvolvedor e estudante Full Stack com habilidades nas linguagens back end como PHP, banco de dados relacional como MySQL, e também nas seguintes linguagens front end como JavaScript, HTML5, CSS3 entre outros, experiência com prototipação de aplicações através do Figma, além de outros conhecimentos como infraestrutura geral, GitHub e Photoshop, sou apaixonado pela a área de TI e estou sempre em constante estudo para evoluir e adquirir cada vez mais conhecimentos.</p>
+        <!-- about me -->
+        <section id="about-me" class="bg-primary">
+            <article class="container-xxl px-md-5 py-3">
+                <h3 class="fw-bolder text-dark">Quem sou</h3>
+                <p class="p-4">Desenvolvedor e estudante Full Stack com habilidades nas linguagens back end como PHP, banco de dados relacional como MySQL, e também nas seguintes linguagens front end como JavaScript, HTML5, CSS3 entre outros, experiência com prototipação de aplicações através do Figma, além de outros conhecimentos como infraestrutura geral, GitHub e Photoshop, sou apaixonado pela a área de TI e estou sempre em constante estudo para evoluir e adquirir cada vez mais conhecimentos.</p>
+            </article>
+        </section>
+
+        <!-- skills -->
+        <section id="skills" class="position-relative text-white">
+            <img class="wave-effect-top position-absolute top-0 start-0" src="./assets/wave.svg" alt="wave effect">
+
+            <!-- subcontainer -->
+            <article class="skills-subcontainer container-xxl px-md-5 py-3 text-center">
+                <h3 class="scroll-fade">Habilidades</h3>
+                <p class="scroll-fade">Conheça algumas das minhas habilidades usadas no dia a dia.</p>
+
+                <!-- design -->
+                <section class="illustration-container d-flex align-items-center justify-content-between py-5">
+                    <object class="illustration-width pe-4" data="./assets/design-illustration.svg" type="image/svg+xml"></object>
+
+                    <div class="illustration-describe-left text-start position-relative scroll-right">
+                        <h4>Prototipação</h4>
+                        <p>Criação de protótipos de sites e apps pelo Figma, desde a criação do seu fluxo de navegação, regras de negócio através do FigJam, experiência de usuário, até o design geral responsivo do projeto com diferentes níveis de fidelidade.</p>
+                    </div>
+                </section>
+
+                <!-- seo -->
+                <section class="illustration-container-reverse d-flex flex-row-reverse align-items-center justify-content-between py-5">
+                    <object class="illustration-width ps-4" data="./assets/seo-illustration.svg" type="image/svg+xml"></object>
+
+                    <div class="illustration-describe-right text-end position-relative scroll-left">
+                        <h4>Boas práticas de SEO</h4>
+                        <p>Implementação de boas práticas de SEO como conteúdos descritivos, assets com texto alternativo e utilização do HTML de forma semântica ao conteúdo do projeto.</p>
+                    </div>
+                </section>
+
+                <!-- team work -->
+                <section class="illustration-container d-flex align-items-center justify-content-between py-5">
+                    <object class="illustration-width pe-4" data="./assets/community-illustration.svg" type="image/svg+xml"></object>
+
+                    <div class="illustration-describe-left text-start position-relative scroll-right">
+                        <h4>Trabalho em equipe</h4>
+                        <p>Um bom nível de comunicação e interação com a equipe, desde participações em reuniões e planejamentos, até a colaboração no desenvolvimento do projeto através de metodologias ágeis.</p>
+                    </div>
+                </section>
+
+                <!-- results -->
+                <section class="illustration-container-reverse d-flex flex-row-reverse align-items-center justify-content-between py-5">
+                    <object class="illustration-width ps-4" data="./assets/results-illustration.svg" type="image/svg+xml"></object>
+
+                    <div class="illustration-describe-right text-end position-relative scroll-left">
+                        <h4>Resultados</h4>
+                        <p>Utilização de tecnologias vinculado ao tipo de projeto, organização inteligente do conteúdo trazendo uma melhor visibilidade e destaque ao projeto, facilitando a captação e conversão de novos usuários.</p>
+                    </div>
+                </section>
+            </article>
+
+            <img class="wave-effect-bottom position-absolute bottom-0 end-0" style="transform: scaleY(-1);" src="./assets/wave.svg" alt="wave effect">
         </section>
     </main>
     
     <!-- bootstrap scripts -->
     <script src="./css/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- own script -->
+    <script src="./js/scrollReveal.js"></script>
+    
 </body>
 </html>
