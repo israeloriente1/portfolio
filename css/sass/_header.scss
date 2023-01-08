@@ -1,0 +1,130 @@
+@import "./variables";
+
+header {
+    .contact-nav-item {
+        border-radius: 0px 0px 12px 12px;
+    }
+
+    /* modal button */
+
+    button.mobile-button img {
+        height: 22px;
+    }
+
+    button.mobile-close-button {
+        border: none !important;
+
+        img {
+            filter: invert(1);
+            height: 20px;
+        }
+    }
+
+    nav#modal-nav {
+        height: 100%;
+
+        li:active {
+            transform: scale(.9);
+        }
+
+        ul.modal-social-media {
+            position: absolute;
+            bottom: 20px;
+            right: 17px;
+        }
+    }
+
+    /* title */
+
+    section.header-title {
+        position: relative;
+        width: fit-content;
+
+        h1 {
+            font-weight: 700;
+            font-size: 83.0652px;
+            line-height: 80px;
+            letter-spacing: 0.115em;
+            color: $color6;
+        }
+
+        span.dashed-letter {
+            text-shadow:
+                -2px 0px 0px $color6,
+                2px 0px 0px $color6,
+                0px -2px 0px $color6,
+                0px 2px 0px $color6;
+            color: #A0B9D9;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -23px;
+            right: -35px;
+            width: 130px;
+            height: 10px;
+            background-color: $color6;
+        }
+    }
+
+    
+}
+
+@media (max-width: 1050px) {
+    header {
+        h1 {
+            font-size: 60px !important;
+            line-height: 64px !important;
+        }
+
+        .illustration-height {
+            height: 410px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        section#header-main-content {
+            flex-direction: column-reverse;
+
+            object {
+                margin-bottom: 80px;
+            }
+        }
+    } 
+}
+
+@media (max-width: 600px) {
+    header {
+        img.logo {
+            max-height: 25px;
+            margin: auto;
+            padding-left: 50px;
+        }
+
+        nav#header-nav ul li {
+            display: none;
+        }
+
+        nav button.mobile-button {
+            display: flex !important;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        section.header-title h1 {
+            margin-left: -32px;
+            font-size: 50px;
+            line-height: 52px;
+        }
+
+        section#header-main-content object {
+            height: 360px;
+        }
+    }
+}

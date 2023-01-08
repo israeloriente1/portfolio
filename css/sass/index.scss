@@ -30,4 +30,8 @@
 @import "../bootstrap/scss/transitions";
 
 // 7. Optionally bootstrap overwrite here
-@import 'typography';
+@import './typography';
+@import './global';
+
+
+@import './header';

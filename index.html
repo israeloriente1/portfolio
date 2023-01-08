@@ -11,132 +11,8 @@
 
     <title>Portfólio | Israel Oriente - Desenvolvedor Web</title>
 
-    <style>
-        .logo {
-            max-height: 30px;
-        }
+    <style>      
 
-        .illustration-height {
-            height: 490px;
-        }
-
-        /* header */
-
-        header .contact-nav-item {
-            border-radius: 0px 0px 12px 12px;
-        }
-
-        /* modal button */
-        header button.mobile-button img {
-            height: 22px;
-        }
-
-        header button.mobile-close-button {
-            border: none !important;
-        }
-
-        header button.mobile-close-button img {
-            filter: invert(1);
-            height: 20px;
-        }
-
-        header nav#modal-nav li:active {
-            transform: scale(.9);
-        }
-
-        header nav#modal-nav {
-            height: 100%;
-        }
-
-        header nav#modal-nav ul.modal-social-media {
-            position: absolute;
-            bottom: 20px;
-            right: 17px;
-        }
-
-        /* title */
-
-        header h1 {
-            font-weight: 700;
-            font-size: 83.0652px;
-            line-height: 80px;
-            letter-spacing: 0.115em;
-            color: #384359;
-        }
-
-        header span.dashed-letter {
-            text-shadow:
-                -2px 0px 0px #384359,
-                2px 0px 0px #384359,
-                0px -2px 0px #384359,
-                0px 2px 0px #384359;
-            color: #A0B9D9;
-        }
-
-        header section.header-title {
-            position: relative;
-            width: fit-content;
-        }
-
-        header section.header-title::after {
-            content: "";
-            display: block;
-            position: absolute;
-            bottom: -23px;
-            right: -35px;
-            width: 130px;
-            height: 10px;
-            background-color: #384359;
-        }
-
-        @media (max-width: 1050px) {
-            header h1 {
-                font-size: 60px;
-                line-height: 64px;
-            }
-
-            .illustration-height {
-                height: 410px;
-            }
-        }
-
-        @media (max-width: 800px) {
-            header section#header-main-content {
-                flex-direction: column-reverse;
-            }
-
-            header section#header-main-content object {
-                margin-bottom: 80px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            header img.logo {
-                max-height: 25px;
-                margin: auto;
-                padding-left: 50px;
-            }
-
-            header nav#header-nav ul li {
-                display: none;
-            }
-
-            header nav button.mobile-button {
-                display: flex !important;
-            }
-        }
-
-        @media (max-width: 500px) {
-            header section.header-title h1 {
-                margin-left: -32px;
-                font-size: 50px;
-                line-height: 52px;
-            }
-
-            header section#header-main-content object {
-                height: 360px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -223,6 +99,13 @@
 
         <img class="d-block mx-auto py-3" src="./assets/arrow-down.png" alt="arrow down" style="width: 35px;">
     </header>
+
+    <main>
+        <section id="about-me" class="bg-primary container-xxl px-md-5 py-3">
+            <h3 class="fw-bolder text-dark">Quem sou</h3>
+            <p class="p-4">Desenvolvedor e estudante Full Stack com habilidades nas linguagens back end como PHP, banco de dados relacional como MySQL, e também nas seguintes linguagens front end como JavaScript, HTML5, CSS3 entre outros, experiência com prototipação de aplicações através do Figma, além de outros conhecimentos como infraestrutura geral, GitHub e Photoshop, sou apaixonado pela a área de TI e estou sempre em constante estudo para evoluir e adquirir cada vez mais conhecimentos.</p>
+        </section>
+    </main>
     
     <!-- bootstrap scripts -->
     <script src="./css/bootstrap/dist/js/bootstrap.min.js"></script>
