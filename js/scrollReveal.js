@@ -14,7 +14,7 @@ ScrollReveal({reset: true}).reveal(".scroll-fade", {
     opacity: 0,
     duration: 1000,
     delay: 100,
-    reset: true
+    reset: false
 });
 
 ScrollReveal({ distance: '50px' });
@@ -37,19 +37,25 @@ ScrollReveal({reset: true}).reveal(".scroll-bottom", {
 });
 
 ScrollReveal({reset: true}).reveal(".scroll-left", {
-    interval: 50,
+    interval: 0,
     opacity: 0,
     origin: "right",
     duration: 1000,
-    delay: 300,
-    reset: true
+    reset: false
 });
 
 ScrollReveal({reset: true}).reveal(".scroll-right", {
-    interval: 50,
+    interval: 0,
     opacity: 0,
     origin: "left",
     duration: 1000,
-    delay: 300,
+    reset: false
+});
+
+ScrollReveal({reset: true}).reveal(".scroll-right-title", {
+    interval: 0,
+    opacity: 0,
+    origin: "left",
+    duration: 1000,
     reset: true
 });

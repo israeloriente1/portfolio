@@ -6,13 +6,14 @@
     height: 490px;
 }
 
-.illustration-width {
+.illustration-width-height {
     max-width: 500px;
+    max-height: 320px;
 }
 
 // scroll reveal
 
-.scroll-grow, .scroll-fade, .scroll-top, .scroll-bottom, .scroll-left, .scroll.right {
+.scroll-grow, .scroll-fade, .scroll-top, .scroll-bottom, .scroll-left, .scroll-right, .scroll-right-title {
     visibility: hidden;
 }
 
