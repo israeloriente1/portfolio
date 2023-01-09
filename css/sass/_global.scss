@@ -1,3 +1,5 @@
+@import "./typography";
+
 .logo {
     max-height: 30px;
 }
@@ -11,9 +13,27 @@
     max-height: 320px;
 }
 
+.dashed-letter-dark {
+    text-shadow:
+        -2px 0px 0px $color6,
+        2px 0px 0px $color6,
+        0px -2px 0px $color6,
+        0px 2px 0px $color6;
+    color: $color0;
+}
+
+.dashed-letter-light {
+    text-shadow:
+        -2px 0px 0px $color0,
+        2px 0px 0px $color0,
+        0px -2px 0px $color0,
+        0px 2px 0px $color0;
+    color: $color6;
+}
+
 // scroll reveal
 
-.scroll-grow, .scroll-fade, .scroll-top, .scroll-bottom, .scroll-left, .scroll-right, .scroll-right-title {
+.scroll-grow, .scroll-fade, .scroll-top, .scroll-bottom, .scroll-left, .scroll-right, .scroll-right-title, .scroll-grow-icon {
     visibility: hidden;
 }
 

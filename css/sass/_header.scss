@@ -7,8 +7,12 @@ header {
 
     /* modal button */
 
-    button.mobile-button img {
-        height: 22px;
+    button.mobile-button {
+        border-radius: 0px 0px 5px 5px;
+
+        img {
+            height: 22px; 
+        }
     }
 
     button.mobile-close-button {
@@ -46,15 +50,6 @@ header {
             line-height: 80px;
             letter-spacing: 0.115em;
             color: $color6;
-        }
-
-        span.dashed-letter {
-            text-shadow:
-                -2px 0px 0px $color6,
-                2px 0px 0px $color6,
-                0px -2px 0px $color6,
-                0px 2px 0px $color6;
-            color: $color0;
         }
 
         &::after {
@@ -118,7 +113,6 @@ header {
 @media (max-width: 500px) {
     header {
         section.header-title h1 {
-            margin-left: -32px;
             font-size: 50px;
             line-height: 52px;
         }

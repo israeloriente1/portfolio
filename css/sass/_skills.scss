@@ -8,7 +8,7 @@ section#skills {
 .illustration-describe-left, .illustration-describe-right {
     max-width: 450px;
 }
-
+div
 div.illustration-describe-left::after, div.illustration-describe-right::after {
     content: "";
     display: block;
@@ -28,29 +28,31 @@ div.illustration-describe-right::after {
 }
 
 @media (max-width: 1070px) {
-    .illustration-width {
+    .illustration-width-height {
         max-width: 400px;
     }
 }
 
+@media (max-width: 1050px) {
+    .illustration-describe-left, .illustration-describe-right {
+        max-width: 350px;
+    }
+}
+
 @media (max-width: 870px) {
-    .illustration-width {
+    .illustration-width-height {
         max-width: 360px;
     }
 }
 
-@media (max-width: 700px) {
-    section.illustration-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    section.illustration-container-reverse {
+@media (max-width: 850px) {
+    div.illustration-container, div.illustration-container-reverse {
         display: flex !important;
         flex-direction: column !important;
+        align-items: center !important;
     }
 
-    .illustration-width {
+    .illustration-width-height {
         padding-right: 0 !important;
         padding-left: 0 !important;
     }

@@ -9,6 +9,15 @@ ScrollReveal({reset: true}).reveal(".scroll-grow", {
     reset: true
 });
 
+ScrollReveal({reset: true}).reveal(".scroll-grow-icon", {
+    interval: 30,
+    scale: 0.8,
+    opacity: 0,
+    duration: 1000,
+    delay: 100,
+    reset: false
+});
+
 ScrollReveal({reset: true}).reveal(".scroll-fade", {
     interval: 30,
     opacity: 0,
@@ -37,7 +46,7 @@ ScrollReveal({reset: true}).reveal(".scroll-bottom", {
 });
 
 ScrollReveal({reset: true}).reveal(".scroll-left", {
-    interval: 0,
+    interval: 35,
     opacity: 0,
     origin: "right",
     duration: 1000,
@@ -45,7 +54,7 @@ ScrollReveal({reset: true}).reveal(".scroll-left", {
 });
 
 ScrollReveal({reset: true}).reveal(".scroll-right", {
-    interval: 0,
+    interval: 35,
     opacity: 0,
     origin: "left",
     duration: 1000,
@@ -53,7 +62,7 @@ ScrollReveal({reset: true}).reveal(".scroll-right", {
 });
 
 ScrollReveal({reset: true}).reveal(".scroll-right-title", {
-    interval: 0,
+    interval: 35,
     opacity: 0,
     origin: "left",
     duration: 1000,

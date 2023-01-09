@@ -15,8 +15,26 @@
     <title>Portfólio | Israel Oriente - Desenvolvedor Web</title>
 
     <style> 
-        
-        
+        /* projects */
+        section#projects {
+            background: linear-gradient(156.75deg, #384359 30.21%, #1B212D 66.67%);
+            padding: 10rem 0px;
+        }
+
+        div.projects-title {
+            width: fit-content;
+        }
+
+        div.projects-title::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -10px;
+            right: -30px;
+            width: 100px;
+            height: 4px;
+            background-color: #FFFFFF;
+        }
     </style>
 </head>
 <body>
@@ -40,16 +58,16 @@
                     </li>
 
                     <!-- mobile menu (modal button) -->
-                    <button type="button" class="mobile-button d-none btn btn-primary py-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="mobile-button d-none btn btn-info py-4 scroll-bottom" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <img src="./assets/menu-mobile.svg" alt="menu mobile">
                     </button>
                 </ul>
             </nav>
 
             <!-- Modal -->
-            <div class="mobile-modal-menu bg-dark modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="mobile-modal-menu bg-info modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content bg-dark container-xxl text-white">
+                <div class="modal-content bg-info container-xxl text-white">
                     <!-- header -->
                     <div class="modal-header border-0">
                         <h5 class="modal-title">Menu</h5>
@@ -92,10 +110,20 @@
         <!-- main content -->
         <section id="header-main-content" class="container-xxl d-flex justify-content-between align-items-center px-md-5 py-5">
             <!-- title -->
-            <section class="header-title d-flex flex-column flex-column-reverse scroll-right-title">
-                <h1>Israel <br> <span class="dashed-letter">Oriente</span></h1>
-                <h5 class="text-center text-secondary">PORTFÓLIO</h5>
-            </section>
+            <div class="header-title-container d-flex flex-column">
+                <section class="header-title d-flex flex-column flex-column-reverse scroll-right-title mb-5">
+                    <h1>Israel <br> <span class="dashed-letter-dark">Oriente</span></h1>
+                    <h5 class="text-center text-secondary">PORTFÓLIO</h5>
+                </section>
+
+                <div class="header-links d-flex mt-3">
+                    <a class="btn btn-dark px-3 d-flex flex-row align-items-center scroll-right-title" href="https://github.com/israeloriente1" target="_blank" rel="external">
+                        <img src="./assets/Github white.svg" alt="github logo">
+                        <span class="px-3">GitHub</span>
+                    </a>
+                    <a class="btn btn-outline-dark ms-3 px-3 scroll-right-title" href="#" target="_blank" rel="external">Download CV</a>
+                </div>
+            </div>
 
             <!-- illustration -->
             <object class="illustration-height" data="./assets/code-illustration.svg" type="image/svg+xml"></object>
@@ -106,9 +134,9 @@
 
     <main>
         <!-- about me -->
-        <section id="about-me" class="bg-light">
+        <section id="about" class="bg-light">
             <article class="container-xxl px-md-5 py-3">
-                <h3 class="fw-bolder text-dark">Quem sou</h3>
+                <h3 class="fw-bolder text-dark">Sobre</h3>
                 <p class="p-4">Desenvolvedor e estudante Full Stack com habilidades nas linguagens back end como PHP, banco de dados relacional como MySQL, e também nas seguintes linguagens front end como JavaScript, HTML5, CSS3 entre outros, experiência com prototipação de aplicações através do Figma, além de outros conhecimentos como infraestrutura geral, GitHub e Photoshop, sou apaixonado pela a área de TI e estou sempre em constante estudo para evoluir e adquirir cada vez mais conhecimentos.</p>
             </article>
         </section>
@@ -123,45 +151,99 @@
                 <p class="scroll-fade">Conheça algumas das minhas habilidades usadas no dia a dia.</p>
 
                 <!-- design -->
-                <section class="illustration-container d-flex align-items-center justify-content-between py-5">
+                <div class="illustration-container d-flex align-items-center justify-content-around py-5">
                     <object class="illustration-width-height pe-4" data="./assets/design-illustration.svg" type="image/svg+xml"></object>
 
                     <div class="illustration-describe-left text-start position-relative scroll-right">
                         <h4>Prototipação</h4>
                         <p>Criação de protótipos de sites e apps pelo Figma, desde a criação do seu fluxo de navegação, regras de negócio através do FigJam, experiência de usuário, até o design geral responsivo do projeto com diferentes níveis de fidelidade.</p>
                     </div>
-                </section>
+                </div>
 
                 <!-- seo -->
-                <section class="illustration-container-reverse d-flex flex-row-reverse align-items-center justify-content-between py-5">
+                <div class="illustration-container-reverse d-flex flex-row-reverse align-items-center justify-content-around py-5">
                     <object class="illustration-width-height ps-4" data="./assets/seo-illustration.svg" type="image/svg+xml"></object>
 
                     <div class="illustration-describe-right text-end position-relative scroll-left">
                         <h4>Boas práticas de SEO</h4>
                         <p>Implementação de boas práticas de SEO como conteúdos descritivos, assets com texto alternativo e utilização do HTML de forma semântica ao conteúdo do projeto.</p>
                     </div>
-                </section>
+                </div>
 
                 <!-- team work -->
-                <section class="illustration-container d-flex align-items-center justify-content-between py-5">
+                <div class="illustration-container d-flex align-items-center justify-content-around py-5">
                     <object class="illustration-width-height pe-4" data="./assets/community-illustration.svg" type="image/svg+xml"></object>
 
                     <div class="illustration-describe-left text-start position-relative scroll-right">
                         <h4>Trabalho em equipe</h4>
                         <p>Um bom nível de comunicação e interação com a equipe, desde participações em reuniões e planejamentos, até a colaboração no desenvolvimento do projeto através de metodologias ágeis.</p>
                     </div>
-                </section>
+                </div>
 
                 <!-- results -->
-                <section class="illustration-container-reverse d-flex flex-row-reverse align-items-center justify-content-between py-5">
+                <div class="illustration-container-reverse d-flex flex-row-reverse align-items-center justify-content-around py-5">
                     <object class="illustration-width-height ps-4" data="./assets/results-illustration.svg" type="image/svg+xml"></object>
 
                     <div class="illustration-describe-right text-end position-relative scroll-left">
                         <h4>Resultados</h4>
                         <p>Utilização de tecnologias vinculado ao tipo de projeto, organização inteligente do conteúdo trazendo uma melhor visibilidade e destaque ao projeto, facilitando a captação e conversão de novos usuários.</p>
                     </div>
-                </section>
+                </div>
             </article>
+
+            <img class="wave-effect-bottom position-absolute bottom-0 end-0" style="transform: scaleY(-1);" src="./assets/wave.svg" alt="wave effect">
+        </section>
+
+        <!-- tecnologies -->
+        <section id="tecnologies" class="container-xxl px-md-5 py-5 my-5 d-flex justify-content-around align-items-center">
+            <div class="tecnologies-title position-relative text-dark fw-bolder">
+                <h2>Tecnologias <br> <span class="dashed-letter-dark">Que mais utilizo</span></h2>
+            </div>
+
+            <div class="tecnologies-container">
+                <div class="tecnologie-row d-flex py-4">
+                    <img class="px-3 scroll-grow-icon" src="./assets/Javascript.svg" alt="JavaScript logo">
+                    <img class="px-3 scroll-grow-icon" src="./assets/React.svg" alt="React logo">
+                    <img class="px-3 scroll-grow-icon" src="./assets/MySQL.svg" alt="MySQL logo">
+                    <img class="px-3 scroll-grow-icon" src="./assets/HTML5.svg" alt="Html logo">
+                </div>
+                
+                <div class="tecnologie-row d-flex py-4">
+                    <img class="px-3 scroll-grow-icon" src="./assets/Sass.svg" alt="Sass logo">
+                    <img class="px-3 scroll-grow-icon" src="./assets/Postman.svg" alt="Postman logo">
+                    <img class="px-3 scroll-grow-icon" src="./assets/wordpress.svg" alt="Wordpress logo">
+                    <img class="px-3 scroll-grow-icon" src="./assets/CSS3.svg" alt="Css3 logo">
+                </div>
+                
+                <div class="tecnologie-row d-flex py-4">
+                    <img class="px-3 scroll-grow-icon" src="./assets/Nodejs.svg" alt="NodeJS logo">
+                    <img class="px-3 scroll-grow-icon" src="./assets/Github.svg" alt="Github logo">
+                    <img class="px-3 scroll-grow-icon" src="./assets/Figma.svg" alt="Figma logo">
+                    <img class="px-3 scroll-grow-icon" src="./assets/Bootstrap.svg" alt="Bootstrap logo">
+                </div>
+                
+                <div class="tecnologie-row d-flex py-4">
+                    <img class="px-3 scroll-grow-icon" src="./assets/PHP.svg" alt="PHP logo">
+                    <img class="px-3 scroll-grow-icon" src="./assets/Adobe Photoshop.svg" alt="Photoshop logo">
+                    <img class="px-3 scroll-grow-icon" src="./assets/Visual Studio Code.svg" alt="Vscode logo">
+                    <img class="px-3 scroll-grow-icon" src="./assets/Git.svg" alt="Git logo">
+                </div>
+            </div>
+        </section>
+
+        <!-- projects -->
+        <section id="projects" class="position-relative text-light">
+            <img class="wave-effect-top position-absolute top-0 start-0" src="./assets/wave.svg" alt="wave effect">
+
+            <div class="projects-subcontainer container-xxl px-md-5 py-3">
+                <div class="projects-title position-relative mx-auto">
+                    <h2>Projetos <br> <span class="dashed-letter-light text-dark">Desenvolvidos</span></h2>
+                </div>
+
+                <p class="mx-auto d-block text-center my-5">Conheça alguns dos projetos desenvolvidos durante a minha jornada.</p>
+
+
+            </div>
 
             <img class="wave-effect-bottom position-absolute bottom-0 end-0" style="transform: scaleY(-1);" src="./assets/wave.svg" alt="wave effect">
         </section>
