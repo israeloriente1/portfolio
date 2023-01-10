@@ -13,22 +13,17 @@
     max-height: 320px;
 }
 
-.dashed-letter-dark {
-    text-shadow:
-        -2px 0px 0px $color6,
-        2px 0px 0px $color6,
-        0px -2px 0px $color6,
-        0px 2px 0px $color6;
-    color: $color0;
+.dashed-letter, .dashed-letter-light {
+    color: transparent !important;
+    -webkit-text-stroke-width: 1px !important;
+}
+
+.dashed-letter {
+    -webkit-text-stroke-color: $color6 !important;
 }
 
 .dashed-letter-light {
-    text-shadow:
-        -2px 0px 0px $color0,
-        2px 0px 0px $color0,
-        0px -2px 0px $color0,
-        0px 2px 0px $color0;
-    color: $color6;
+    -webkit-text-stroke-color: $color0 !important;
 }
 
 // scroll reveal

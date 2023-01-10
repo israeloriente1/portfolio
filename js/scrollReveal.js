@@ -1,6 +1,6 @@
 // All scroll reveal config
 
-ScrollReveal({reset: true}).reveal(".scroll-grow", {
+ScrollReveal().reveal(".scroll-grow", {
     interval: 30,
     scale: 0.8,
     opacity: 0,
@@ -9,7 +9,7 @@ ScrollReveal({reset: true}).reveal(".scroll-grow", {
     reset: true
 });
 
-ScrollReveal({reset: true}).reveal(".scroll-grow-icon", {
+ScrollReveal().reveal(".scroll-grow-icon", {
     interval: 30,
     scale: 0.8,
     opacity: 0,
@@ -18,7 +18,7 @@ ScrollReveal({reset: true}).reveal(".scroll-grow-icon", {
     reset: false
 });
 
-ScrollReveal({reset: true}).reveal(".scroll-fade", {
+ScrollReveal().reveal(".scroll-fade", {
     interval: 30,
     opacity: 0,
     duration: 1000,
@@ -26,9 +26,9 @@ ScrollReveal({reset: true}).reveal(".scroll-fade", {
     reset: false
 });
 
-ScrollReveal({ distance: '50px' });
+ScrollReveal({ distance: '40px' });
 
-ScrollReveal({reset: true}).reveal(".scroll-top", {
+ScrollReveal().reveal(".scroll-top", {
     interval: 30,
     opacity: 0,
     origin: "bottom",
@@ -37,7 +37,7 @@ ScrollReveal({reset: true}).reveal(".scroll-top", {
     reset: true
 });
 
-ScrollReveal({reset: true}).reveal(".scroll-bottom", {
+ScrollReveal().reveal(".scroll-bottom", {
     interval: 30,
     opacity: 0,
     origin: "top",
@@ -45,7 +45,7 @@ ScrollReveal({reset: true}).reveal(".scroll-bottom", {
     reset: true
 });
 
-ScrollReveal({reset: true}).reveal(".scroll-left", {
+ScrollReveal().reveal(".scroll-left", {
     interval: 35,
     opacity: 0,
     origin: "right",
@@ -53,7 +53,7 @@ ScrollReveal({reset: true}).reveal(".scroll-left", {
     reset: false
 });
 
-ScrollReveal({reset: true}).reveal(".scroll-right", {
+ScrollReveal().reveal(".scroll-right", {
     interval: 35,
     opacity: 0,
     origin: "left",
@@ -61,7 +61,7 @@ ScrollReveal({reset: true}).reveal(".scroll-right", {
     reset: false
 });
 
-ScrollReveal({reset: true}).reveal(".scroll-right-title", {
+ScrollReveal().reveal(".scroll-right-title", {
     interval: 35,
     opacity: 0,
     origin: "left",

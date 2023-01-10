@@ -10,31 +10,12 @@
     <link rel="stylesheet" href="./css/index.css">
 
     <!-- Import ScrollReveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
     <title>Portfólio | Israel Oriente - Desenvolvedor Web</title>
 
     <style> 
-        /* projects */
-        section#projects {
-            background: linear-gradient(156.75deg, #384359 30.21%, #1B212D 66.67%);
-            padding: 10rem 0px;
-        }
-
-        div.projects-title {
-            width: fit-content;
-        }
-
-        div.projects-title::after {
-            content: "";
-            display: block;
-            position: absolute;
-            bottom: -10px;
-            right: -30px;
-            width: 100px;
-            height: 4px;
-            background-color: #FFFFFF;
-        }
+        
     </style>
 </head>
 <body>
@@ -112,7 +93,7 @@
             <!-- title -->
             <div class="header-title-container d-flex flex-column">
                 <section class="header-title d-flex flex-column flex-column-reverse scroll-right-title mb-5">
-                    <h1>Israel <br> <span class="dashed-letter-dark">Oriente</span></h1>
+                    <h1>Israel <br> <span class="dashed-letter">Oriente</span></h1>
                     <h5 class="text-center text-secondary">PORTFÓLIO</h5>
                 </section>
 
@@ -121,12 +102,13 @@
                         <img src="./assets/Github white.svg" alt="github logo">
                         <span class="px-3">GitHub</span>
                     </a>
-                    <a class="btn btn-outline-dark ms-3 px-3 scroll-right-title" href="#" target="_blank" rel="external">Download CV</a>
+                    <a class="btn btn-outline-dark ms-3 px-3 scroll-right-title" href="#" target="_blank" rel="external">
+                        Download CV</a>
                 </div>
             </div>
 
             <!-- illustration -->
-            <object class="illustration-height" data="./assets/code-illustration.svg" type="image/svg+xml"></object>
+            <img class="illustration-height" src="./assets/code-illustration.svg" alt="code illustration"></img>
         </section>
 
         <img class="d-block mx-auto py-3 scroll-bottom" src="./assets/arrow-down.png" alt="arrow down" style="width: 35px;">
@@ -142,17 +124,17 @@
         </section>
 
         <!-- skills -->
-        <section id="skills" class="position-relative text-white">
+        <section id="skills" class="position-relative text-light">
             <img class="wave-effect-top position-absolute top-0 start-0" src="./assets/wave.svg" alt="wave effect">
 
             <!-- subcontainer -->
-            <article class="skills-subcontainer container-xxl px-md-5 py-3 text-center">
+            <article class="skills-subcontainer container-xxl px-md-5 py-5 text-center">
                 <h3 class="scroll-fade">Habilidades</h3>
                 <p class="scroll-fade">Conheça algumas das minhas habilidades usadas no dia a dia.</p>
 
                 <!-- design -->
-                <div class="illustration-container d-flex align-items-center justify-content-around py-5">
-                    <object class="illustration-width-height pe-4" data="./assets/design-illustration.svg" type="image/svg+xml"></object>
+                <div class="illustration-container d-flex align-items-center justify-content-around py-2">
+                    <img class="illustration-width-height pe-4" src="./assets/design-illustration.svg" alt="design illustration"></img>
 
                     <div class="illustration-describe-left text-start position-relative scroll-right">
                         <h4>Prototipação</h4>
@@ -162,7 +144,7 @@
 
                 <!-- seo -->
                 <div class="illustration-container-reverse d-flex flex-row-reverse align-items-center justify-content-around py-5">
-                    <object class="illustration-width-height ps-4" data="./assets/seo-illustration.svg" type="image/svg+xml"></object>
+                    <img class="illustration-width-height ps-4" src="./assets/seo-illustration.svg" alt="seo illustration"></img>
 
                     <div class="illustration-describe-right text-end position-relative scroll-left">
                         <h4>Boas práticas de SEO</h4>
@@ -172,7 +154,7 @@
 
                 <!-- team work -->
                 <div class="illustration-container d-flex align-items-center justify-content-around py-5">
-                    <object class="illustration-width-height pe-4" data="./assets/community-illustration.svg" type="image/svg+xml"></object>
+                    <img class="illustration-width-height pe-4" src="./assets/community-illustration.svg" alt="community illustration"></img>
 
                     <div class="illustration-describe-left text-start position-relative scroll-right">
                         <h4>Trabalho em equipe</h4>
@@ -182,7 +164,7 @@
 
                 <!-- results -->
                 <div class="illustration-container-reverse d-flex flex-row-reverse align-items-center justify-content-around py-5">
-                    <object class="illustration-width-height ps-4" data="./assets/results-illustration.svg" type="image/svg+xml"></object>
+                    <img class="illustration-width-height ps-4" src="./assets/results-illustration.svg" alt="results illustration"></img>
 
                     <div class="illustration-describe-right text-end position-relative scroll-left">
                         <h4>Resultados</h4>
@@ -197,7 +179,7 @@
         <!-- tecnologies -->
         <section id="tecnologies" class="container-xxl px-md-5 py-5 my-5 d-flex justify-content-around align-items-center">
             <div class="tecnologies-title position-relative text-dark fw-bolder">
-                <h2>Tecnologias <br> <span class="dashed-letter-dark">Que mais utilizo</span></h2>
+                <h2>Tecnologias <br> <span class="dashed-letter">Que mais utilizo</span></h2>
             </div>
 
             <div class="tecnologies-container">
@@ -235,14 +217,66 @@
         <section id="projects" class="position-relative text-light">
             <img class="wave-effect-top position-absolute top-0 start-0" src="./assets/wave.svg" alt="wave effect">
 
+            <!-- subcontainer -->
             <div class="projects-subcontainer container-xxl px-md-5 py-3">
                 <div class="projects-title position-relative mx-auto">
-                    <h2>Projetos <br> <span class="dashed-letter-light text-dark">Desenvolvidos</span></h2>
+                    <h2 class="fw-bolder">Projetos <br> <span class="dashed-letter-light text-dark">Desenvolvidos</span></h2>
                 </div>
 
                 <p class="mx-auto d-block text-center my-5">Conheça alguns dos projetos desenvolvidos durante a minha jornada.</p>
 
+                <!-- projects -->
+                <div class="project-item-container">
+                    <div class="project-item text-dark bg-light border border-3 border-light mx-auto rounded d-flex justify-content-between align-items-center my-5 scroll-grow-icon">
+                        <img class="project-item-illustration img-fluid" src="./assets/tag-project.png" alt="exemplo">
+                    
+                        <div class="project-item-describe mx-auto d-flex flex-column align-items-start px-2 py-4">
+                            <h3 class="fw-bolder text-dark">Aspan</h3>
+                            <p class="fw-bolder text-info">Protótipo <span class="text-dark">+</span> Front end</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam autem nostrum quod quo perspiciatis rerum! Ducimus libero quasi maiores dicta eum cumque natus animi temporibus dolore vero, facere sit laudantium.</p>
+                            <a class="project-item-link btn btn-info text-decoration-none align-self-end" href="#"><span class="px-2">Acessar</span><img src="./assets/arrow-right.svg" alt="arrow right"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-divider"></div>
 
+                    <div class="project-item project-item-reverse text-dark bg-light border border-3 border-light mx-auto rounded d-flex flex-row-reverse justify-content-between align-items-center my-5 scroll-grow-icon">
+                        <img class="project-item-illustration img-fluid" src="./assets/tag-project.png" alt="exemplo">
+                    
+                        <div class="project-item-describe mx-auto d-flex flex-column align-items-start px-2 py-4">
+                            <h3 class="fw-bolder text-dark">Tag Solução Digital</h3>
+                            <p class="fw-bolder text-info">Protótipo <span class="text-dark">+</span> Front end</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam autem nostrum quod quo perspiciatis rerum! Ducimus libero quasi maiores dicta eum cumque natus animi temporibus dolore vero, facere sit laudantium.</p>
+                            <a class="project-item-link btn btn-info text-decoration-none align-self-end" href="#"><span class="px-2">Acessar</span><img src="./assets/arrow-right.svg" alt="arrow right"></a>
+                        </div>
+                    </div>
+
+                    <div class="project-divider"></div>
+
+                    <div class="project-item text-dark bg-light border border-3 border-light mx-auto rounded d-flex justify-content-between align-items-center my-5 scroll-grow-icon">
+                        <img class="project-item-illustration img-fluid" src="./assets/tag-project.png" alt="exemplo">
+                    
+                        <div class="project-item-describe mx-auto d-flex flex-column align-items-start px-2 py-4">
+                            <h3 class="fw-bolder text-dark">Shortly</h3>
+                            <p class="fw-bolder text-info">Front end</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam autem nostrum quod quo perspiciatis rerum! Ducimus libero quasi maiores dicta eum cumque natus animi temporibus dolore vero, facere sit laudantium.</p>
+                            <a class="project-item-link btn btn-info text-decoration-none align-self-end" href="#"><span class="px-2">Acessar</span><img src="./assets/arrow-right.svg" alt="arrow right"></a>
+                        </div>
+                    </div>
+
+                    <div class="project-divider"></div>
+
+                    <div class="project-item project-item-reverse text-dark bg-light border border-3 border-light mx-auto rounded d-flex flex-row-reverse justify-content-between align-items-center my-5 scroll-grow-icon">
+                        <img class="project-item-illustration img-fluid" src="./assets/tag-project.png" alt="exemplo">
+                    
+                        <div class="project-item-describe mx-auto d-flex flex-column align-items-start px-2 py-4">
+                            <h3 class="fw-bolder text-dark">Dev Tech</h3>
+                            <p class="fw-bolder text-info">Front end</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam autem nostrum quod quo perspiciatis rerum! Ducimus libero quasi maiores dicta eum cumque natus animi temporibus dolore vero, facere sit laudantium.</p>
+                            <a class="project-item-link btn btn-info text-decoration-none align-self-end" href="#"><span class="px-2">Acessar</span><img src="./assets/arrow-right.svg" alt="arrow right"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <img class="wave-effect-bottom position-absolute bottom-0 end-0" style="transform: scaleY(-1);" src="./assets/wave.svg" alt="wave effect">

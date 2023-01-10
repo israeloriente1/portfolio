@@ -85,7 +85,7 @@ header {
         section#header-main-content {
             flex-direction: column-reverse;
 
-            object {
+            img.illustration-height {
                 margin-bottom: 80px;
             }
         }
@@ -117,7 +117,7 @@ header {
             line-height: 52px;
         }
 
-        section#header-main-content object {
+        section#header-main-content img.illustration-height {
             height: 360px;
         }
     }
