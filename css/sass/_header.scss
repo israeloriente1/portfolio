@@ -5,6 +5,20 @@ header {
         border-radius: 0px 0px 12px 12px;
     }
 
+    .translate-icon {
+        height: 20px;
+        margin-top: -5px;
+    }
+
+    .form-check-input:checked {
+        background-color: $color6;
+        border-color: $color6;
+    }
+
+    .form-check-input, .form-check-input:focus {
+        border-color: $color5;
+    }
+
     /* modal button */
 
     button.mobile-button {
@@ -31,10 +45,16 @@ header {
             transform: scale(.9);
         }
 
-        ul.modal-social-media {
+        .modal-social-media {
             position: absolute;
             bottom: 20px;
             right: 17px;
+        }
+
+        .translate-button {
+            position: absolute;
+            bottom: 20px;
+            left: 0px;
         }
     }
 
@@ -100,8 +120,8 @@ header {
             padding-left: 50px;
         }
 
-        nav#header-nav ul li {
-            display: none;
+        nav#header-nav ul li, nav#header-nav ul .translate-button {
+            display: none !important;
         }
 
         nav button.mobile-button {

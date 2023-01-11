@@ -29,6 +29,10 @@ div.projects-title {
 
 .project-item-describe {
     max-width: 390px;
+
+    a.project-item-link span {
+        font-size: 15px;
+    }
 }
 
 .project-item-illustration {

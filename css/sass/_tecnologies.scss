@@ -22,6 +22,11 @@ section#tecnologies {
 
     .tecnologie-row img {
         height: 55px !important;
+        transition: .35s;
+
+        &:hover {
+            transform: scale(1.50);
+        }
     }
 }
 

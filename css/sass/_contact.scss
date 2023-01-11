@@ -1,0 +1,47 @@
+@import "./variables";
+
+.contact-illustration {
+    max-width: 500px;
+}
+
+.contact-title {
+    width: fit-content;
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        right: -30px;
+        width: 100px;
+        height: 4px;
+        background-color: $color6;
+    }
+}
+
+/* contact item */
+
+.contact-item, .contact-item-cover {
+    width: fit-content;
+    transition: .32s;
+}
+
+.contact-item:hover {
+    transform: scale(1.10);
+}
+
+.contact-item:hover .contact-item-cover {
+    box-shadow: 0px 0px 20px #384359;
+}
+
+@media (max-width: 950px) {
+    .contact-illustration {
+        max-width: 430px;
+    }
+}
+
+@media (max-width: 850px) {
+    .contact-illustration {
+        max-width: 360px;
+    }
+}

@@ -42,7 +42,7 @@ ScrollReveal().reveal(".scroll-bottom", {
     opacity: 0,
     origin: "top",
     duration: 1000,
-    reset: true
+    reset: false
 });
 
 ScrollReveal().reveal(".scroll-left", {

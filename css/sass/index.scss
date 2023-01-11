@@ -28,6 +28,7 @@
 @import "../bootstrap/scss/nav";
 @import "../bootstrap/scss/navbar";
 @import "../bootstrap/scss/transitions";
+@import "../bootstrap/scss/forms/form-check";
 
 // 7. Optionally bootstrap overwrite here
 @import './typography';
@@ -38,3 +39,5 @@
 @import './skills';
 @import './tecnologies';
 @import './projects';
+@import './contact';
+@import './footer';
