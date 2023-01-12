@@ -14,7 +14,7 @@
 
     <title>Portfólio | Israel Oriente - Desenvolvedor Web</title>
 </head>
-<body>
+<body onload="browserCheck()">
 
     <header id="header-container" class="bg-light">
         <!-- nav container -->
@@ -26,9 +26,12 @@
                 <ul class="navbar-nav d-flex flex-row fw-semibold">
                     <!-- translate button -->
                     <li class="translate-button nav-item scroll-bottom d-flex align-items-center justify-content-between">
-                        <label class="px-3" for="translateButton"><img class="translate-icon" src="./assets/translate-icon.svg" alt="translate icon"></label>
+                        <label class="px-3" for="translateButton">
+                            <img class="translate-icon" src="./assets/translate-icon.svg" alt="translate icon">
+                        </label>
+
                         <div class="form-check form-switch mb-0">
-                            <input class="form-check-input" type="checkbox" role="switch" id="translateButton">
+                            <input class="form-check-input translate-check" type="checkbox" role="switch" id="translateButton">
                         </div>
                     </li>
 
@@ -37,10 +40,10 @@
                       <a class="nav-link px-3 py-4" href="#header-container">Home</a>
                     </li>
                     <li class="nav-item scroll-bottom">
-                      <a class="nav-link px-3 py-4" href="#projects">Projetos</a>
+                      <a class="nav-link px-3 py-4 projects-nav" href="#projects">Projetos</a>
                     </li>
                     <li class="contact-nav-item nav-item text-white bg-info scroll-bottom">
-                      <a class="nav-link px-3 py-4" href="#contact">Contato</a>
+                      <a class="nav-link px-3 py-4 contact-nav" href="#contact">Contato</a>
                     </li>
 
                     <!-- mobile menu (modal button) -->
@@ -55,8 +58,8 @@
                 <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content bg-light container-xxl text-dark">
                     <!-- header -->
-                    <div class="modal-header border-0">
-                        <h5 class="modal-title">Menu</h5>
+                    <div class="modal-header border-0 d-flex justify-content-end position-relative">
+                        <h5 class="modal-title fw-bolder position-absolute start-50 translate-middle-x">Menu</h5>
                         <button type="button" class="btn-close py-3 px-3" aria-label="Close" data-bs-dismiss="modal"></button>
                     </div>
 
@@ -69,30 +72,30 @@
                                   <a class="nav-link px-3 py-4" href="#header-container">Home</a>
                                 </li>
                                 <li class="nav-item text-dark" data-bs-dismiss="modal">
-                                  <a class="nav-link px-3 py-4" href="#projects">Projetos</a>
+                                  <a class="nav-link px-3 py-4 projects-nav" href="#projects">Projetos</a>
                                 </li>
                                 <li class="nav-item text-dark" data-bs-dismiss="modal">
-                                  <a class="nav-link px-3 py-4" href="#contact">Contato</a>
+                                  <a class="nav-link px-3 py-4 contact-nav" href="#contact">Contato</a>
                                 </li>
                             </ul>
 
                             <ul class="navbar-nav">
                                 <!-- translate button -->
-                                <li class="translate-button nav-item d-flex align-items-center">
+                                <li class="translate-button nav-item d-flex align-items-center start-50 translate-middle-x">
                                     <label class="px-3" for="modalTranslateButton"><img class="translate-icon" src="./assets/translate-icon.svg" alt="translate icon"></label>
                                     <div class="form-check form-switch mb-0">
-                                        <input class="form-check-input" type="checkbox" role="switch" id="modalTranslateButton">
+                                        <input class="form-check-input translate-check" type="checkbox" role="switch" id="modalTranslateButton">
                                     </div>
                                 </li>
 
-                                <div class="modal-social-media d-flex flex-row-reverse">
+                                <!-- <div class="modal-social-media d-flex flex-row-reverse">
                                     <li class="nav-item text-dark">
                                         <a href="https://wa.me/5583987119375" target="_blank" rel="external"><img class="whatsapp-icon" src="./assets/logo whatsapp.svg" alt="whatsapp logo" style="height: 25px;"></a>
                                     </li>
                                     <li class="nav-item text-dark me-3">
                                         <a href="https://www.linkedin.com/in/israeloriente/" target="_blank" rel="external"><img src="./assets/logo linkedin.svg" alt="linkedin logo"></a>
                                     </li>
-                                </div>
+                                </div> -->
                             </ul>
                         </nav>
                     </div>
@@ -107,7 +110,7 @@
             <div class="header-title-container d-flex flex-column">
                 <section class="header-title d-flex flex-column flex-column-reverse scroll-right-title mb-5">
                     <h1>Israel <br> <span class="dashed-letter">Oriente</span></h1>
-                    <h5 class="text-center text-secondary">PORTFÓLIO</h5>
+                    <h5 id="headerSubtitle" class="text-center text-secondary">PORTFÓLIO</h5>
                 </section>
 
                 <div class="header-links d-flex mt-3">
@@ -115,7 +118,7 @@
                         <img src="./assets/Github white.svg" alt="github logo">
                         <span class="px-3">GitHub</span>
                     </a>
-                    <a class="btn btn-outline-dark ms-3 px-3 scroll-right-title" href="#" target="_blank" rel="external">
+                    <a id="digital-resume" class="btn btn-outline-dark ms-3 px-3 scroll-right-title" href="./assets/Currículo Israel Oriente.pdf" download>
                         Download CV</a>
                 </div>
             </div>
@@ -131,8 +134,8 @@
         <!-- about me -->
         <section id="about" class="bg-light">
             <article class="container-xxl px-md-5 py-3">
-                <h3 class="fw-bolder text-dark">Sobre</h3>
-                <p class="p-4">Desenvolvedor e estudante Full Stack com habilidades nas linguagens back end como PHP, banco de dados relacional como MySQL, e também nas seguintes linguagens front end como JavaScript, HTML5, CSS3 entre outros, experiência com prototipação de aplicações através do Figma, além de outros conhecimentos como infraestrutura geral, GitHub e Photoshop, sou apaixonado pela a área de TI e estou sempre em constante estudo para evoluir e adquirir cada vez mais conhecimentos.</p>
+                <h3 class="fw-bolder text-dark about-title">Sobre</h3>
+                <p id="aboutDescription" class="p-4">Desenvolvedor Web com experiência e habilidades nas principais linguagens front e back end como, PHP, MySQL, JS, Wordpress entre outros, desenvolvo soluções web desde a criação dos mapas das regras de negócio, design do site com diferentes níveis de fidelidade e de modo responsivo, até o desenvolvimento web gerenciados por metodologias ágeis.</p>
             </article>
         </section>
 
@@ -141,47 +144,49 @@
             <img class="wave-effect-top position-absolute top-0 start-0" src="./assets/wave.svg" alt="wave effect">
 
             <!-- subcontainer -->
-            <article class="skills-subcontainer container-xxl px-md-5 py-5 text-center">
-                <h3 class="scroll-fade">Habilidades</h3>
-                <p class="scroll-fade">Conheça algumas das minhas habilidades usadas no dia a dia.</p>
+            <article class="skills-subcontainer container-xxl px-md-5 text-center">
+                <div class="skills-title-container pt-5 pb-0">
+                    <h3 class="scroll-fade skills-title">Habilidades</h3>
+                    <p id="skills-description" class="scroll-fade">Conheça algumas das minhas habilidades usadas diariamente.</p>
+                </div>
 
                 <!-- design -->
-                <div class="illustration-container d-flex align-items-center justify-content-around py-2">
+                <div class="illustration-container d-flex align-items-center justify-content-around mb-2">
                     <img class="illustration-width-height pe-4" src="./assets/design-illustration.svg" alt="design illustration"></img>
 
                     <div class="illustration-describe-left text-start position-relative scroll-right">
-                        <h4>Prototipação</h4>
-                        <p>Criação de protótipos de sites e apps pelo Figma, desde a criação do seu fluxo de navegação, regras de negócio através do FigJam, experiência de usuário, até o design geral responsivo do projeto com diferentes níveis de fidelidade.</p>
+                        <h4 id="designTitle">Prototipação</h4>
+                        <p id="designDescription">Criação de protótipos de sites e apps pelo Figma, desde a criação do seu fluxo de navegação, regras de negócio através do FigJam, experiência de usuário, até o design geral responsivo do projeto com diferentes níveis de fidelidade.</p>
                     </div>
                 </div>
 
                 <!-- seo -->
-                <div class="illustration-container-reverse d-flex flex-row-reverse align-items-center justify-content-around py-5">
+                <div class="illustration-container-reverse d-flex flex-row-reverse align-items-center justify-content-around">
                     <img class="illustration-width-height ps-4" src="./assets/seo-illustration.svg" alt="seo illustration"></img>
 
                     <div class="illustration-describe-right text-end position-relative scroll-left">
-                        <h4>Boas práticas de SEO</h4>
-                        <p>Implementação de boas práticas de SEO como conteúdos descritivos, assets com texto alternativo e utilização do HTML de forma semântica ao conteúdo do projeto.</p>
+                        <h4 id="seoTitle">Boas práticas de SEO</h4>
+                        <p id="seoDescription">Implementação de boas práticas de SEO como conteúdos descritivos, assets com texto alternativo e utilização do HTML de forma semântica ao conteúdo do projeto.</p>
                     </div>
                 </div>
 
                 <!-- team work -->
-                <div class="illustration-container d-flex align-items-center justify-content-around py-5">
+                <div class="illustration-container d-flex align-items-center justify-content-around">
                     <img class="illustration-width-height pe-4" src="./assets/community-illustration.svg" alt="community illustration"></img>
 
                     <div class="illustration-describe-left text-start position-relative scroll-right">
-                        <h4>Trabalho em equipe</h4>
-                        <p>Um bom nível de comunicação e interação com a equipe, desde participações em reuniões e planejamentos, até a colaboração no desenvolvimento do projeto através de metodologias ágeis.</p>
+                        <h4 id="teamTitle">Trabalho em equipe</h4>
+                        <p id="teamDescription">Um bom nível de comunicação e interação com a equipe, desde participações em reuniões e planejamentos, até a colaboração no desenvolvimento do projeto através de metodologias ágeis.</p>
                     </div>
                 </div>
 
                 <!-- results -->
-                <div class="illustration-container-reverse d-flex flex-row-reverse align-items-center justify-content-around py-5">
+                <div class="illustration-container-reverse d-flex flex-row-reverse align-items-center justify-content-around">
                     <img class="illustration-width-height ps-4" src="./assets/results-illustration.svg" alt="results illustration"></img>
 
                     <div class="illustration-describe-right text-end position-relative scroll-left">
-                        <h4>Resultados</h4>
-                        <p>Utilização de tecnologias vinculado ao tipo de projeto, organização inteligente do conteúdo trazendo uma melhor visibilidade e destaque ao projeto, facilitando a captação e conversão de novos usuários.</p>
+                        <h4 id="resultsTitle">Resultados</h4>
+                        <p id="resultsDescription">Utilização de tecnologias vinculado ao tipo de projeto, organização inteligente do conteúdo trazendo uma melhor visibilidade e destaque ao projeto, facilitando a captação e conversão de novos usuários.</p>
                     </div>
                 </div>
             </article>
@@ -192,7 +197,7 @@
         <!-- tecnologies -->
         <section id="tecnologies" class="container-xxl px-md-5 py-5 my-5 d-flex justify-content-around align-items-center">
             <div class="tecnologies-title position-relative text-dark fw-bolder">
-                <h2>Tecnologias <br> <span class="dashed-letter">Que mais utilizo</span></h2>
+                <h2 id="tecnologiesTitleContent">Tecnologias <br> <span class="dashed-letter">Que mais utilizo</span></h2>
             </div>
 
             <div class="tecnologies-container">
@@ -231,62 +236,62 @@
             <img class="wave-effect-top position-absolute top-0 start-0" src="./assets/wave.svg" alt="wave effect">
 
             <!-- subcontainer -->
-            <div class="projects-subcontainer container-xxl px-md-5 py-3">
+            <div class="projects-subcontainer container-xxl px-md-5">
                 <div class="projects-title position-relative mx-auto">
-                    <h2 class="fw-bolder">Projetos <br> <span class="dashed-letter-light text-dark">Desenvolvidos</span></h2>
+                    <h2 id="projects-title-content" class="fw-bolder mx-2">Projetos <span class="dashed-letter-light text-dark">Desenvolvidos</span></h2>
                 </div>
 
-                <p class="mx-auto d-block text-center my-5">Conheça alguns dos projetos desenvolvidos durante a minha jornada.</p>
+                <p id="projects-title-description" class="mx-auto d-block text-center my-5">Conheça alguns dos projetos desenvolvidos durante a minha jornada.</p>
 
                 <!-- projects -->
                 <div class="project-item-container">
-                    <div class="project-item text-dark bg-light border border-3 border-light mx-auto rounded d-flex justify-content-between align-items-center my-5 scroll-grow-icon">
+                    <div class="project-item text-dark bg-light border border-3 border-light mx-auto rounded d-flex justify-content-between align-items-center my-5 scroll-grow-icon shadow-lg">
                         <img class="project-item-illustration img-fluid" src="./assets/project-aspan.jpg" alt="projeto aspan">
                     
                         <div class="project-item-describe mx-auto d-flex flex-column align-items-start px-2 py-4">
                             <h3 class="fw-bolder text-dark">Aspan</h3>
-                            <p class="fw-bolder text-info">Protótipo <span class="text-dark">+</span> Front end</p>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam autem nostrum quod quo perspiciatis rerum! Ducimus libero quasi maiores dicta eum cumque natus animi temporibus dolore vero, facere sit laudantium.</p>
-                            <a class="project-item-link btn btn-info text-decoration-none align-self-end" href="http://aspan.com.br/" target="_blank" rel="external"><span class="px-2 fw-bolder">Acessar</span><img src="./assets/arrow-right.svg" alt="arrow right"></a>
+                            <p class="fw-bolder text-info"><span class="prototype-subtitle">Protótipo</span> <span class="text-dark">+</span> Front end</p>
+                            <p id="aspan-description">A Aspan tem como principal objetivo atender a população idosa de baixa renda da cidade de João Pessoa, e tem caráter filantrópico, organizacional, assistencial e promocional, sem qualquer caráter político ou partidário.</p>
+                            <a class="project-item-link btn btn-info text-decoration-none align-self-end" href="http://aspan.com.br/" target="_blank" rel="external"><span class="px-2 fw-bolder access-button">Acessar</span><img src="./assets/arrow-right.svg" alt="arrow right"></a>
                         </div>
                     </div>
                     
                     <div class="project-divider"></div>
 
-                    <div class="project-item project-item-reverse text-dark bg-light border border-3 border-light mx-auto rounded d-flex flex-row-reverse justify-content-between align-items-center my-5 scroll-grow-icon">
+                    <div class="project-item project-item-reverse text-dark bg-light border border-3 border-light mx-auto rounded d-flex flex-row-reverse justify-content-between align-items-center my-5 scroll-grow-icon shadow-lg">
                         <img class="project-item-illustration img-fluid" src="./assets/project-tag.jpg" alt="projeto tag">
                     
                         <div class="project-item-describe mx-auto d-flex flex-column align-items-start px-2 py-4">
-                            <h3 class="fw-bolder text-dark">Tag Solução Digital</h3>
-                            <p class="fw-bolder text-info">Protótipo <span class="text-dark">+</span> Front end</p>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam autem nostrum quod quo perspiciatis rerum! Ducimus libero quasi maiores dicta eum cumque natus animi temporibus dolore vero, facere sit laudantium.</p>
-                            <a class="project-item-link btn btn-info text-decoration-none align-self-end" href="http://tagsolucaodigital.com.br/" target="_blank" rel="external"><span class="px-2 fw-bolder">Acessar</span><img src="./assets/arrow-right.svg" alt="arrow right"></a>
+                            <h3 id="tag-title" class="fw-bolder text-dark">Tag Solução Digital</h3>
+                            <p class="fw-bolder text-info"><span class="prototype-subtitle">Protótipo</span> <span class="text-dark">+</span> Front end</p>
+                            <p id="tag-description">A Startup Tag tem como proposta desenvolver e solucionar projetos de forma digital, desde sites profissionais, gestão de redes sociais, assessorias em estratégias de vendas e atendimentos, estratégias de tráfego pago, fotografia, até filmes coorporativos e eventos.</p>
+                            <a class="project-item-link btn btn-info text-decoration-none align-self-end" href="http://tagsolucaodigital.com.br/" target="_blank" rel="external"><span class="px-2 fw-bolder access-button">Acessar</span><img src="./assets/arrow-right.svg" alt="arrow right"></a>
                         </div>
                     </div>
 
                     <div class="project-divider"></div>
 
-                    <div class="project-item text-dark bg-light border border-3 border-light mx-auto rounded d-flex justify-content-between align-items-center my-5 scroll-grow-icon">
+                    <div class="project-item text-dark bg-light border border-3 border-light mx-auto rounded d-flex justify-content-between align-items-center my-5 scroll-grow-icon shadow-lg">
                         <img class="project-item-illustration img-fluid" src="./assets/project-shortly.jpg" alt="projeto shortly">
                     
                         <div class="project-item-describe mx-auto d-flex flex-column align-items-start px-2 py-4">
                             <h3 class="fw-bolder text-dark">Shortly</h3>
                             <p class="fw-bolder text-info">Front end</p>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam autem nostrum quod quo perspiciatis rerum! Ducimus libero quasi maiores dicta eum cumque natus animi temporibus dolore vero, facere sit laudantium.</p>
-                            <a class="project-item-link btn btn-info text-decoration-none align-self-end" href="https://israeloriente1.github.io/shortly-project/" target="_blank" rel="external"><span class="px-2 fw-bolder">Acessar</span><img src="./assets/arrow-right.svg" alt="arrow right"></a>
+                            <p id="shortly-description">A Shortly foi um projeto/desafio do Front end mentor, onde o projeto tem como objetivo ser um site que encurte links muito grande através de uma API, no qual implementei no projeto através do JavaScript através de funções assíncronas e manipulação DOM.</p>
+                            <a class="project-item-link btn btn-info text-decoration-none align-self-end" href="https://israeloriente1.github.io/shortly-project/" target="_blank" rel="external"><span class="px-2 fw-bolder access-button">Acessar</span><img src="./assets/arrow-right.svg" alt="arrow right"></a>
                         </div>
                     </div>
 
                     <div class="project-divider"></div>
 
-                    <div class="project-item project-item-reverse text-dark bg-light border border-3 border-light mx-auto rounded d-flex flex-row-reverse justify-content-between align-items-center my-5 scroll-grow-icon">
+                    <div class="project-item project-item-reverse text-dark bg-light border border-3 border-light mx-auto rounded d-flex flex-row-reverse justify-content-between align-items-center my-5 scroll-grow-icon shadow-lg">
                         <img class="project-item-illustration img-fluid" src="./assets/project-devtech.jpg" alt="projeto devtech">
                     
                         <div class="project-item-describe mx-auto d-flex flex-column align-items-start px-2 py-4">
                             <h3 class="fw-bolder text-dark">Dev Tech</h3>
                             <p class="fw-bolder text-info">Front end</p>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam autem nostrum quod quo perspiciatis rerum! Ducimus libero quasi maiores dicta eum cumque natus animi temporibus dolore vero, facere sit laudantium.</p>
-                            <a class="project-item-link btn btn-info text-decoration-none align-self-end" href="https://israeloriente1.github.io/devtech-project/" target="_blank" rel="external"><span class="px-2 fw-bolder">Acessar</span><img src="./assets/arrow-right.svg" alt="arrow right"></a>
+                            <p id="devtech-description">O projeto Devtech tem como proposta ser uma landing page de uma plataforma de impulsionamento digital, com gestão de marketing e gerenciamento de tráfego pago, nesse projeto foi utilizado as principais linguagens front end como HTML e CSS.</p>
+                            <a class="project-item-link btn btn-info text-decoration-none align-self-end" href="https://israeloriente1.github.io/devtech-project/" target="_blank" rel="external"><span class="px-2 fw-bolder access-button">Acessar</span><img src="./assets/arrow-right.svg" alt="arrow right"></a>
                         </div>
                     </div>
                 </div>
@@ -296,51 +301,51 @@
         </section>
 
         <!-- contact -->
-        <section id="contact" class="container-xxl px-md-5 my-5 d-flex flex-wrap justify-content-around align-items-center ">
+        <section id="contact" class="container-xxl px-md-5 my-5 py-4 d-flex flex-wrap justify-content-around align-items-center ">
             <!-- title -->
             <div class="contact-title-container w-100 my-3 scroll-grow-icon">
-                <h2 class="contact-title fw-bolder text-dark mx-auto d-block position-relative">Vamos criar algo <br> <span class="dashed-letter">Entre em contato</span></h2>
+                <h2 id="contact-title-content" class="contact-title fw-bolder text-dark mx-auto d-block position-relative">Entre em <span class="dashed-letter">contato</span></h2>
             </div>
 
             <!-- illustration -->
-            <img class="contact-illustration pt-5 px-3" src="./assets/reviews-illustration.svg" alt="contact illustration">
+            <img class="contact-illustration mt-5 px-3" src="./assets/reviews-illustration.svg" alt="contact illustration">
 
             <!-- contacts -->
-            <div class="contact-item-container d-flex flex-column pt-5">
+            <div class="contact-item-container d-flex flex-column mt-5">
 
-                <a class="contact-item text-decoration-none d-flex flex-row align-items-center align-items-center p-2 scroll-right" href="https://wa.me/5583987119375" target="_blank" rel="external">
+                <a class="contact-item text-decoration-none d-flex flex-row align-items-center align-items-center p-2 scroll-right w-100" href="https://wa.me/5583987119375" target="_blank" rel="external">
                     <div class="contact-item-cover bg-dark rounded-circle p-3 me-2">
                         <img src="./assets/Whatsapp-white.svg" alt="whatsapp logo">
                     </div>
 
-                    <span class="text-dark fw-bolder">(83) 98711-9375</span>
+                    <span class="text-dark fw-bold">(83) 98711-9375</span>
                 </a>
 
-                <a class="contact-item text-decoration-none d-flex flex-row align-items-center align-items-center p-2 scroll-right" href="https://www.linkedin.com/in/israeloriente/" target="_blank" rel="external">
+                <a class="contact-item text-decoration-none d-flex flex-row align-items-center align-items-center p-2 scroll-right w-100" href="https://www.linkedin.com/in/israeloriente/" target="_blank" rel="external">
     
                     <div class="contact-item-cover bg-dark rounded-circle p-3 me-2">
                         <img src="./assets/LinkedIn-white.svg" alt="linkedin logo">
                     </div>
 
-                    <span class="text-dark fw-bolder">@israeloriente</span>
+                    <span class="text-dark fw-bold">@israeloriente</span>
                 </a>
 
-                <a class="contact-item text-decoration-none d-flex flex-row align-items-center align-items-center p-2 scroll-right" href="https://github.com/israeloriente1" target="_blank" rel="external">
+                <a class="contact-item text-decoration-none d-flex flex-row align-items-center align-items-center p-2 scroll-right w-100" href="https://github.com/israeloriente1" target="_blank" rel="external">
     
                     <div class="contact-item-cover bg-dark rounded-circle p-3 me-2">
                         <img src="./assets/Github white.svg" alt="Github logo">
                     </div>
 
-                    <span class="text-dark fw-bolder">@israeloriente1</span>
+                    <span class="text-dark fw-bold">@israeloriente1</span>
                 </a>
 
-                <a class="contact-item text-decoration-none d-flex flex-row align-items-center align-items-center p-2 scroll-right" href="mailto:israeloriente1@hotmail.com">
+                <a class="contact-item text-decoration-none d-flex flex-row align-items-center align-items-center p-2 scroll-right w-100" href="mailto:israeloriente1@hotmail.com">
     
                     <div class="contact-item-cover bg-dark rounded-circle p-3 me-2">
                         <img src="./assets/mail.svg" alt="email logo">
                     </div>
 
-                    <span class="text-dark fw-bolder">israeloriente1@hotmail.com</span>
+                    <span class="text-dark fw-bold">israeloriente1@hotmail.com</span>
                 </a>
             </div>
         </section>
@@ -373,16 +378,16 @@
                         <a class="nav-link px-3 py-4" href="#header-container">Home</a>
                     </li>
                     <li class="nav-item fw-bolder">
-                        <a class="nav-link px-3 py-4" href="#skills">Habilidades</a>
+                        <a class="nav-link px-3 py-4 skills-title" href="#skills">Habilidades</a>
                     </li>
                     <li class="nav-item fw-bolder">
-                        <a class="nav-link px-3 py-4" href="#about">Sobre</a>
+                        <a class="nav-link px-3 py-4 about-title" href="#about">Sobre</a>
                     </li>
                     <li class="nav-item fw-bolder">
-                        <a class="nav-link px-3 py-4" href="#contact">Contato</a>
+                        <a class="nav-link px-3 py-4 contact-nav" href="#contact">Contato</a>
                     </li>
                     <li class="nav-item fw-bolder">
-                        <a class="nav-link px-3 py-4" href="#projects">Projetos</a>
+                        <a class="nav-link px-3 py-4 projects-nav" href="#projects">Projetos</a>
                     </li>
                 </ul>
             </nav>
@@ -396,6 +401,8 @@
 
     <!-- own script -->
     <script src="./js/scrollReveal.js"></script>
+    <script src="./js/translate.js"></script>
+    
     
 </body>
 </html>
