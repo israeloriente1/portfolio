@@ -48,3 +48,11 @@
         max-width: 360px;
     }
 }
+
+@media (max-width: 695px) {
+    .contact-illustration {
+        order: -1;
+        margin-top: 0 !important;
+        margin-bottom: 48px;
+    }
+}
